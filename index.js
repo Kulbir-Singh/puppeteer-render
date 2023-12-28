@@ -1,9 +1,7 @@
 const express = require("express");
 const { scrapeLogic } = require("./scrapeLogic");
-console.log("Server-side code running");
 const { PuppeteerScreenRecorder } = require("puppeteer-screen-recorder");
 const puppeteer = require("puppeteer");
-const express = require("express");
 const { PassThrough } = require("stream");
 const app = express();
 require("dotenv").config();
