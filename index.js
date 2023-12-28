@@ -58,14 +58,14 @@ app.get("/record", async (req, res) => {
   console.log("got page html");
   console.log("finished sequence");
 
-  setTimeout(() => {
-    recorder.stop();
-    browser.close();
+  setTimeout(async () => {
+    await recorder.stop();
+    await browser.close();
   }, 1000);
-  res.setHeader("Content-Type", "video/mp4");
-  res.setHeader("Content-Disposition", "inline; filename=recording.mp4");
+  await res.setHeader("Content-Type", "video/mp4");
+  await res.setHeader("Content-Disposition", "inline; filename=recording.mp4");
 
-  pipeStream.pipe(res);
+  await pipeStream.pipe(res);
 });
 
 app.listen(PORT, () => {
