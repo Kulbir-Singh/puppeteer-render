@@ -1,0 +1,16 @@
+@keyframes example {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+.example {
+  background-color: blue;
+  animation: example 2s;
+}
